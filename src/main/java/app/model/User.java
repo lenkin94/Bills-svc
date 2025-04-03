@@ -13,13 +13,15 @@ import java.util.UUID;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name = "users")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
+    @Column(unique = true, nullable = false)
     private UUID userId;
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     private List<Bill> bills = new ArrayList<>();
 }

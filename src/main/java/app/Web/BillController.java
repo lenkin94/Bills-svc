@@ -4,6 +4,7 @@ import app.Web.dto.AddBillRequest;
 import app.Web.dto.BillResponse;
 import app.Web.mapper.DtoMapper;
 import app.model.Bill;
+import app.model.User;
 import app.service.BillService;
 import app.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +13,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 @RestController
